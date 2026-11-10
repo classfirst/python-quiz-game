@@ -124,3 +124,6 @@ state.json이 없는 경우 기본 퀴즈 5개를 사용합니다.
 ## 10. 실행 결과
 
 실행 스크린샷은 docs/screenshots/ 폴더에 저장합니다.
+
+## Git Clone Practice
+This repository was cloned and updated successfully.
