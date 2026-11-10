@@ -1,6 +1,6 @@
 
 from quiz_data import create_default_quizzes
-
+from quiz import Quiz
 
 def show_menu():
     print("\n================================")
@@ -32,6 +32,41 @@ def get_number(prompt, minimum, maximum):
             return number
 
         print(f"⚠️ {minimum}부터 {maximum}까지 입력하세요.")
+
+def get_non_empty_text(prompt):
+    while True:
+        text = input(prompt).strip()
+
+        if text:
+            return text
+
+        print("⚠️ 빈 입력은 허용되지 않습니다. 다시 입력하세요.")
+
+def add_quiz(quizzes):
+    print("\n📌 새로운 퀴즈를 추가합니다.")
+
+    question = get_non_empty_text(
+        "문제를 입력하세요: "
+    )
+
+    choices = []
+
+    for number in range(1, 5):
+        choice = get_non_empty_text(
+            f"선택지 {number}: "
+        )
+        choices.append(choice)
+
+    answer = get_number(
+        "정답 번호 (1-4): ", 1, 4
+    )
+
+    new_quiz = Quiz(question, choices, answer)
+
+    quizzes.append(new_quiz)
+
+    print("\n✅ 새로운 퀴즈가 추가되었습니다!")
+    print(f"📚 현재 등록된 퀴즈: {len(quizzes)}개")
 
 
 def play_quiz(quizzes):
@@ -79,7 +114,7 @@ def main():
                 play_quiz(quizzes)
 
             elif number == 2:
-                print("📌 퀴즈 추가 기능은 준비 중입니다.")
+                add_quiz(quizzes)
 
             elif number == 3:
                 print("📋 퀴즈 목록 기능은 준비 중입니다.")
