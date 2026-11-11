@@ -125,5 +125,26 @@ state.json이 없는 경우 기본 퀴즈 5개를 사용합니다.
 
 실행 스크린샷은 docs/screenshots/ 폴더에 저장합니다.
 
+### 개발 환경
+![개발 환경](docs/screenshots/environment.png)
+
+### 메인 메뉴
+![메인 메뉴](docs/screenshots/menu.png)
+
+### 퀴즈 추가
+![퀴즈 추가](docs/screenshots/add_quiz.png)
+
+### 퀴즈 목록
+![퀴즈 목록](docs/screenshots/quiz_list.png)
+
+### 퀴즈 풀이
+![퀴즈 풀이](docs/screenshots/play.png)
+
+### 최고 점수
+![최고 점수](docs/screenshots/score.png)
+
+### Git 커밋 및 병합 이력
+![Git 로그](docs/screenshots/git_log.png)
+
 ## Git Clone Practice
 This repository was cloned and updated successfully.
